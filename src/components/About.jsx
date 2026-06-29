@@ -14,7 +14,7 @@ function PolaroidImage() {
       >
         <div className="w-56 sm:w-64 md:w-72 aspect-[3/4] bg-slate-200 overflow-hidden">
           <img
-            src="/profile.jpg"
+            src="/profile.jpeg"
             alt="Oliver Ramos"
             className="w-full h-full object-cover"
             onError={(e) => {
@@ -34,29 +34,38 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative w-full py-24 md:py-32 lg:py-40 px-6"
-      style={{
-        background: 'linear-gradient(to bottom, #0f172a 0%, #1e3a8a 20%, #1e3a8a 60%, #0f172a 100%)',
-      }}
+      className="relative w-full py-16 md:py-20 px-4 overflow-hidden"
+      style={{ background: '#0a0a0a' }}
     >
-      {/* Subtle radial glow */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            'radial-gradient(ellipse 70% 50% at 50% 40%, rgba(59,130,246,0.12) 0%, transparent 70%)',
-        }}
+      <img
+        src="/mountain-green.jpg"
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover z-0 opacity-40"
         aria-hidden="true"
       />
+      {/* <div className="absolute inset-0 z-0" style={{ background: 'rgba(9,9,9,0.6)' }} aria-hidden="true" /> */}
 
-      <div className="relative max-w-5xl mx-auto space-y-24 md:space-y-32">
+      <div className="relative z-10 max-w-6xl mx-auto space-y-14 md:space-y-20">
 
         {/* ── What I care about ── */}
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-blue-400 font-semibold mb-5">
-              what i care about
-            </p>
+            <h2
+            //   className="font-bold text-white leading-none tracking-tight mb-3"
+            //   style={{ fontSize: 'clamp(1.2rem, 2.8vw, 2rem)', fontFamily: 'Inter, system-ui, sans-serif', textShadow: '0 2px 12px rgba(0,0,0,0.7), 0 1px 3px rgba(0,0,0,0.9)' }}
+            // >
+            className="font-black tracking-tighter leading-none mb-5"
+          style={{
+            fontSize: 'clamp(2.2rem, 4vw, 4.5rem)',
+            fontFamily: 'Inter, system-ui, sans-serif',
+            background: 'linear-gradient(175deg, rgba(255,255,255,0.98) 0%, rgba(220,232,252,0.95) 38%, rgba(170,195,238,0.90) 72%, rgba(130,165,220,0.88) 100%)',
+            WebkitBackgroundClip: 'text',
+            backgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+          }}
+          >
+              What I Care About
+            </h2>
             <p className="italic font-light text-lg md:text-xl leading-relaxed text-white/80">
               I am driven by community, growth, and innovation in everything that I do. I am someone
               who strives to make an impact. I am someone who is always looking to drive change
@@ -70,20 +79,29 @@ export default function About() {
 
         {/* ── Background ── */}
         <div>
-          <p className="text-xs uppercase tracking-[0.3em] text-blue-400 font-semibold mb-10">
-            background
-          </p>
-          <div className="grid md:grid-cols-2 gap-8 md:gap-14">
-            <div className="space-y-7">
+          <h2
+          //   className="font-bold text-white leading-none tracking-tight mb-4"
+          //   style={{ fontSize: 'clamp(1.2rem, 2.8vw, 2rem)', fontFamily: 'Inter, system-ui, sans-serif', textShadow: '0 2px 12px rgba(0,0,0,0.7), 0 1px 3px rgba(0,0,0,0.9)' }}
+          // >
+          className="heading-inner-shadow font-black tracking-tighter leading-none mb-5"
+          style={{
+            fontSize: 'clamp(2.2rem, 3vw, 4rem)',
+            fontFamily: 'Inter, system-ui, sans-serif',
+          }}
+          >
+            Background
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6 md:gap-14">
+            <div className="space-y-5">
               {BACKGROUND_PARAS.slice(0, 2).map((p, i) => (
-                <p key={i} className="text-white/70 leading-relaxed text-base md:text-[1.05rem]">
+                <p key={i} className="text-white/70 leading-relaxed text-[0.95rem] md:text-[1.1rem]">
                   {p}
                 </p>
               ))}
             </div>
-            <div className="space-y-7">
+            <div className="space-y-5">
               {BACKGROUND_PARAS.slice(2).map((p, i) => (
-                <p key={i} className="text-white/70 leading-relaxed text-base md:text-[1.05rem]">
+                <p key={i} className="text-white/70 leading-relaxed text-[0.95rem] md:text-[1.1rem]">
                   {p}
                 </p>
               ))}

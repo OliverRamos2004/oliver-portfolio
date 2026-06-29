@@ -25,8 +25,10 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       <div
-        className={`bg-white/90 backdrop-blur-md rounded-b-3xl transition-shadow duration-300 ${
-          scrolled ? 'shadow-2xl' : 'shadow-md'
+        className={`transition-all duration-300 ${
+          scrolled
+            ? 'bg-white/95 backdrop-blur-md rounded-b-3xl shadow-2xl'
+            : 'bg-transparent shadow-none'
         }`}
       >
         {/* Desktop */}
@@ -35,7 +37,11 @@ export default function Navbar() {
             <button
               key={link}
               onClick={() => handleNavClick(link)}
-              className="text-sm lowercase tracking-widest font-medium text-slate-500 hover:text-slate-900 hover:scale-105 transition-all duration-200 cursor-pointer"
+              className={`text-sm lowercase tracking-widest font-medium hover:scale-105 transition-all duration-200 cursor-pointer ${
+                scrolled
+                  ? 'text-slate-500 hover:text-slate-900'
+                  : 'text-white/75 hover:text-white'
+              }`}
             >
               {link}
             </button>
@@ -44,13 +50,21 @@ export default function Navbar() {
 
         {/* Mobile header row */}
         <div className="md:hidden flex items-center justify-between py-4 px-6">
-          <span className="text-sm font-semibold tracking-tight text-slate-800 select-none">
+          <span
+            className={`text-sm font-semibold tracking-tight select-none transition-colors duration-300 ${
+              scrolled ? 'text-slate-800' : 'text-white/85'
+            }`}
+          >
             oliver ramos
           </span>
           <button
             onClick={() => setMobileOpen((o) => !o)}
             aria-label="Toggle menu"
-            className="text-slate-600 hover:text-slate-900 transition-colors"
+            className={`transition-colors duration-300 ${
+              scrolled
+                ? 'text-slate-600 hover:text-slate-900'
+                : 'text-white/70 hover:text-white'
+            }`}
           >
             {mobileOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
@@ -58,12 +72,20 @@ export default function Navbar() {
 
         {/* Mobile drawer */}
         {mobileOpen && (
-          <div className="md:hidden flex flex-col items-center gap-5 pb-6 pt-2 border-t border-slate-100">
+          <div
+            className={`md:hidden flex flex-col items-center gap-5 pb-6 pt-2 border-t transition-colors duration-300 ${
+              scrolled ? 'border-slate-100 bg-white/95' : 'border-white/10 bg-black/40 backdrop-blur-md'
+            }`}
+          >
             {NAV_LINKS.map((link) => (
               <button
                 key={link}
                 onClick={() => handleNavClick(link)}
-                className="text-sm lowercase tracking-widest font-medium text-slate-500 hover:text-slate-900 transition-colors cursor-pointer"
+                className={`text-sm lowercase tracking-widest font-medium transition-colors duration-200 cursor-pointer ${
+                  scrolled
+                    ? 'text-slate-500 hover:text-slate-900'
+                    : 'text-white/75 hover:text-white'
+                }`}
               >
                 {link}
               </button>

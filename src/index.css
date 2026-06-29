@@ -23,3 +23,43 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+/* Hide scrollbar while keeping scroll functionality (used by project card slider) */
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Project card: elevation hover — lifts and gains a drop shadow */
+.project-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  transition: background 300ms ease, border-color 300ms ease, transform 300ms ease, box-shadow 300ms ease;
+}
+.project-card:hover {
+  background: rgba(255, 255, 255, 0.065);
+  border-color: rgba(255, 255, 255, 0.22);
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.45);
+}
+
+/* Gradient-fill + drop-shadow combo simulates an inset/inner-shadow on large headings */
+.heading-inner-shadow {
+  background: linear-gradient(
+    175deg,
+    rgba(255, 255, 255, 0.98) 0%,
+    rgba(220, 232, 252, 0.95) 38%,
+    rgba(170, 195, 238, 0.90) 72%,
+    rgba(130, 165, 220, 0.88) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter:
+    drop-shadow(0 1px 0 rgba(255, 255, 255, 0.1))
+    drop-shadow(0 4px 12px rgba(0, 10, 40, 0.85))
+    drop-shadow(0 8px 24px rgba(0, 10, 40, 0.5));
+}
