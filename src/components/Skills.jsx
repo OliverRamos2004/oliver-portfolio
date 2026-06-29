@@ -48,6 +48,10 @@ const TECH_SKILLS = [
     category: 'Software Concepts',
     items: 'CRUD Operations, Authentication & Authorization, Routing',
   },
+  {
+    category: 'AI & LLMs',
+    items: 'Claude Code, Agentic Orchestration, AI Concepts & Literacy',
+  },
 ]
 
 const NON_TECH_SKILLS = [
@@ -213,9 +217,14 @@ export default function Skills() {
 
         {/* Footer action links */}
         <div className="flex flex-wrap gap-6 md:gap-10 justify-center border-t border-white/10 pt-8">
-          <button className="text-sm text-white underline hover:text-sky-400 tracking-wide lowercase transition-colors duration-200 cursor-pointer">
+          <a
+            href="/Ramos_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-white underline hover:text-sky-400 tracking-wide lowercase transition-colors duration-200"
+          >
             download my resume
-          </button>
+          </a>
           <button
             onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
             className="text-sm text-white underline hover:text-sky-400 tracking-wide lowercase transition-colors duration-200 cursor-pointer"
@@ -229,10 +238,20 @@ export default function Skills() {
             get in contact
           </button>
           <a
-            href="#"
+            href="https://www.linkedin.com/in/oliverramos1"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-sm text-white underline hover:text-sky-400 tracking-wide lowercase transition-colors duration-200"
           >
-            Linkedin
+            linkedin
+          </a>
+          <a
+            href="https://github.com/Oliverramos2004github"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-white underline hover:text-sky-400 tracking-wide lowercase transition-colors duration-200"
+          >
+            github
           </a>
         </div>
 

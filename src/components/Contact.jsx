@@ -73,19 +73,19 @@ export default function Contact() {
           <div className="flex flex-col items-center justify-center flex-1 gap-4 py-24">
             <a
               href="mailto:oliver78660@gmail.com"
-              className="font-black tracking-tight text-white/80 hover:text-white text-center leading-none transition-colors duration-300"
+              className="hover-sky-gradient font-black tracking-tight text-white/80 text-center leading-none transition-colors duration-300"
               style={{ fontSize: 'clamp(1rem, 3vw, 3rem)', fontFamily: 'Inter, system-ui, sans-serif' }}
             >
               OLIVER78660@GMAIL.COM
             </a>
             <a
-              href="https://www.linkedin.com/in/oliverramos2004"
+              href="https://www.linkedin.com/in/oliverramos1"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-black tracking-tighter text-white/90 hover:text-cyan-300 text-center leading-none transition-colors duration-300"
+              className="hover-sky-gradient font-black tracking-tighter text-white/90 text-center leading-none transition-colors duration-300"
               style={{ fontSize: 'clamp(2rem, 5.5vw, 5.5rem)', fontFamily: 'Inter, system-ui, sans-serif' }}
             >
-              @OLIVERRAMOS2004
+              @OLIVERRAMOS1
             </a>
           </div>
 
@@ -99,7 +99,9 @@ export default function Contact() {
           {/* Left — social icons */}
           <div className="flex items-center gap-5">
             <a
-              href="#"
+              href="https://www.instagram.com/oliverramos2004"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Instagram"
               className="text-slate-400 hover:text-slate-800 transition-colors duration-200"
             >
@@ -113,7 +115,9 @@ export default function Contact() {
               <Mail size={16} strokeWidth={1.5} />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/oliverramos1"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="LinkedIn"
               className="text-slate-400 hover:text-slate-800 transition-colors duration-200"
             >

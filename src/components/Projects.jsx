@@ -7,8 +7,8 @@ const PROJECTS = [
     description:
       'Replaced a disorganized, paper-based record system at a local healthcare clinic with a secure relational database — enabling ACID-compliant patient data management and consistent workflows across clinic staff.',
     tags: ['Python', 'PostgreSQL', 'SQLite', 'Relational DB Design', 'Healthcare IT'],
-    github: '#',
-    live: '#',
+    github: 'https://github.com/OliverRamos2004/moco-clinic-forms-main',
+    live: 'https://moco-clinic-forms-main.vercel.app/',
   },
   {
     title: 'Small Business Web Presence',
@@ -169,9 +169,14 @@ export default function Projects() {
       {/* Section footer — pinned to bottom */}
       <div className="relative z-10 border-t border-white/10 py-8">
         <div className="flex flex-wrap gap-8 md:gap-16 justify-center">
-          <button className="text-xs font-bold tracking-[0.2em] uppercase text-white/60 hover:text-white transition-colors duration-200 cursor-pointer">
+          <a
+            href="/Ramos_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs font-bold tracking-[0.2em] uppercase text-white/60 hover:text-white transition-colors duration-200"
+          >
             download my resume
-          </button>
+          </a>
           <button
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             className="text-xs font-bold tracking-[0.2em] uppercase text-white/60 hover:text-white transition-colors duration-200 cursor-pointer"
@@ -184,6 +189,14 @@ export default function Projects() {
           >
             view my projects
           </button>
+          <a
+            href="https://github.com/Oliverramos2004github"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs font-bold tracking-[0.2em] uppercase text-white/60 hover:text-white transition-colors duration-200"
+          >
+            github
+          </a>
         </div>
       </div>
 
