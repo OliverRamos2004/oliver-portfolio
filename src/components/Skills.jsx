@@ -1,6 +1,6 @@
 const WORK_EXPERIENCE = [
   {
-    title: 'Database Developer Intern',
+    title: 'Database Developer Intern & Project Lead',
     org: 'Montgomery County Free Clinic',
     period: 'Sept. 2025 – Dec. 2025',
     bullets: [
@@ -10,7 +10,7 @@ const WORK_EXPERIENCE = [
       },
       {
         label: 'System Architecture',
-        desc: 'Collaborated with a team and clinic staff to translate complex healthcare workflows into a scalable, functional solution.',
+        desc: 'Led a 3-person development team to migrate paper workflows into a secure, ACID-compliant PostgreSQL cloud architecture',
       },
     ],
   },
@@ -26,6 +26,21 @@ const WORK_EXPERIENCE = [
       {
         label: 'End-to-End Development',
         desc: 'Managed full-lifecycle development pipelines from UX/UI design in Figma to deployment utilizing industry-standard tools including HTML5, CSS3, Git, and AWS S3.',
+      },
+    ],
+  },
+  {
+    title: 'Founder & Operator',
+    org: 'CutbyOliver',
+    period: 'Aug. 2022 – May. 2026',
+    bullets: [
+      {
+        label: 'Business Development & Growth',
+        desc: 'Scaled a service-based venture to a net base of 150+ loyal clients, conducting a market needs analysis and implementing a custom CRM and digital scheduling pipeline to optimize client engagement',
+      },
+      {
+        label: 'Backend Operations',
+        desc: 'Optimized end-to-end business operations, automating client communications and financial tracking to maintain a 100% reliability rate while managing full-time academic rigor.',
       },
     ],
   },
@@ -229,12 +244,12 @@ export default function Skills() {
             onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
             className="text-sm text-white underline hover:text-sky-400 tracking-wide lowercase transition-colors duration-200 cursor-pointer"
           >
-            view my projects
+            {/* view my projects
           </button>
           <button
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             className="text-sm text-white underline hover:text-sky-400 tracking-wide lowercase transition-colors duration-200 cursor-pointer"
-          >
+          > */}
             get in contact
           </button>
           <a
@@ -246,7 +261,7 @@ export default function Skills() {
             linkedin
           </a>
           <a
-            href="https://github.com/Oliverramos2004github"
+            href="https://github.com/Oliverramos2004"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm text-white underline hover:text-sky-400 tracking-wide lowercase transition-colors duration-200"

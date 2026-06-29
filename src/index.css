@@ -54,6 +54,30 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+/* Animated flowing gradient for the hero headline */
+@keyframes gradient-flow {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-gradient-text {
+  background: linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #7dd3fc 20%,
+    #313d62 40%,
+    #2b2a2a 60%,
+    #2c466d 80%,
+    #ffffff 100%
+  );
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-flow 10s ease infinite;
+}
+
 /* Gradient-fill + drop-shadow combo simulates an inset/inner-shadow on large headings */
 .heading-inner-shadow {
   background: linear-gradient(

@@ -14,18 +14,18 @@ export default function Hero() {
         className="absolute inset-0 w-full h-full object-cover z-0"
       />
 
-      {/* Top-right corner anchor */}
+      {/* Top-right corner anchor
       <button
-        onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
+        onClick={() => document.getElementById('About')?.scrollIntoView({ behavior: 'smooth' })}
         className="absolute top-4 right-6 md:right-12 z-20 text-xs text-white/40 hover:text-white/80 underline underline-offset-2 lowercase transition-colors duration-200"
       >
         learn about me
-      </button>
+      </button> */}
 
       {/* Hero headline */}
       <div className="relative z-10 flex flex-col items-center text-center px-4">
         <h1
-          className="bg-gradient-to-r from-white to-sky-400 bg-clip-text text-transparent font-black tracking-tighter leading-none select-none"
+          className="hero-gradient-text font-black tracking-tighter leading-none select-none"
           style={{
             fontSize: 'clamp(3.5rem, 11vw, 11rem)',
             fontFamily: 'Inter, system-ui, sans-serif',
@@ -34,10 +34,10 @@ export default function Hero() {
           hi, i am Oliver.
         </h1>
         <p
-          className="mt-3 font-light tracking-widest uppercase text-slate-400/70"
-          style={{ fontSize: 'clamp(0.65rem, 1.8vw, 0.85rem)', letterSpacing: '0.35em' }}
+          className="mt-3 font-light tracking-widest uppercase text-slate-200/70"
+          style={{ fontSize: 'clamp(0.65rem, 3.8vw, 0.85rem)', letterSpacing: '0.35em' }}
         >
-          developer &nbsp;·&nbsp; builder &nbsp;·&nbsp; community-driven
+          {/* developer &nbsp;·&nbsp; builder &nbsp;·&nbsp; community-driven */}
         </p>
       </div>
 

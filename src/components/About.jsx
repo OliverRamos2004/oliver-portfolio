@@ -64,13 +64,10 @@ export default function About() {
             WebkitTextFillColor: 'transparent',
           }}
           >
-              What I Care About
+              what i care about
             </h2>
             <p className="italic font-light text-lg md:text-xl leading-relaxed text-white/80">
-              I am driven by community, growth, and innovation in everything that I do. I am someone
-              who strives to make an impact. I am someone who is always looking to drive change
-              through efficiency. I am someone who likes to value community and growth in everything
-              I do.
+            Driven by a commitment to community, growth, and continuous innovation, I strive to deliver high-impact solutions. My approach focuses on driving meaningful change through efficiency and building purposeful projects that support community development.
             </p>
           </div>
 
@@ -89,7 +86,7 @@ export default function About() {
             fontFamily: 'Inter, system-ui, sans-serif',
           }}
           >
-            Background
+            my background
           </h2>
           <div className="grid md:grid-cols-2 gap-6 md:gap-14">
             <div className="space-y-5">
