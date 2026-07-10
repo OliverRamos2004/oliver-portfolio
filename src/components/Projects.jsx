@@ -3,29 +3,45 @@ import { GitBranch, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react
 
 const PROJECTS = [
   {
-    title: 'Patient Records Database System',
+    title: 'Intake Patient Form for Monntgomery County Medical Center',
     description:
       'Replaced a disorganized, paper-based record system at a local healthcare clinic with a secure relational database — enabling ACID-compliant patient data management and consistent workflows across clinic staff.',
-    tags: ['Python', 'PostgreSQL', 'SQLite', 'Relational DB Design', 'Healthcare IT'],
+    tags: ['Typescript', 'React', 'SQL', 'Vercel', 'Relational DB Design', 'Healthcare IT'],
     github: 'https://github.com/OliverRamos2004/moco-clinic-forms-main',
     live: 'https://moco-clinic-forms-main.vercel.app/',
   },
   {
-    title: 'Small Business Web Presence',
+    title: "Professional Site for Jacky's Bouquets",
     description:
-      'Local businesses lacked a professional digital footprint. Consulted with owners to translate brand identities into high-impact websites, deployed to cloud infrastructure for fast, reliable access.',
-    tags: ['HTML5', 'CSS3', 'Figma', 'AWS S3', 'Git'],
-    github: '#',
-    live: '#',
+      'Professional site for Jacky\'s Bouquets, a local florist in the South Texas area. Prototyped with Figma and deployed to AWS S3 for fast, reliable access.',
+    tags: ['HTML5', 'CSS3', 'JavaScript', 'AWS S3', 'Git'],
+    github: 'https://github.com/OliverRamos2004/Jackies-Bouquets',
+    live: 'http://jackysbouquets-web.s3-website-us-east-1.amazonaws.com/',
   },
   {
-    title: 'Developer Portfolio',
+    title: 'Developer Portfolio - Oliver Ramos',
     description:
-      'Needed a fast, visually compelling home on the web to showcase projects, skills, and professional identity. Built entirely from scratch with a section-by-section interactive layout.',
-    tags: ['React', 'Vite', 'Tailwind CSS', 'Vercel'],
-    github: '#',
-    live: '#',
+      'Needed a professional, visually compelling home on the web to showcase projects, skills, and professional identity. Built entirely from scratch with a section-by-section interactive layout.',
+    tags: ['React', 'Vite', 'Tailwind CSS', 'AWS S3'],
+    github: 'https://github.com/OliverRamos2004/oliver-portfolio',
+    live: 'https://oliverramos.dev',
   },
+  {
+    title: 'Professional Site for Green Valley Storage',
+    description:
+      'Professional site for Green Valley Storage LLC, a local hauling company in the Austin Texas area. Built using modern web technologies and deployed to AWS S3.',
+    tags: ['Figma', 'HTML5', 'CSS3','JavaScript', 'Netlify', 'Git'],
+    github: 'https://github.com/OliverRamos2004/Green-Valley-Storage-LLC',
+    live: 'https://greenvalleystoragellc.com/',
+  },
+  // {
+  //   title: 'Professional Site for Tex Country Materials',
+  //   description:
+  //     'Professional site for Tex Country Materials, a local materialhauling company in the Austin Texas area.',
+  //   tags: ['Figma', 'HTML5', 'CSS3','Js', 'AWS S3', 'Git', 'Claude Code'],
+  //   github: 'https://github.com/OliverRamos2004/Green-Valley-Storage-LLC',
+  //   live: 'http://greenvalleystorage-web.s3-website-us-east-1.amazonaws.com/',
+  // },
 ]
 
 export default function Projects() {
