@@ -49,46 +49,46 @@ const WORK_EXPERIENCE = [
 const TECH_SKILLS = [
   {
     category: 'Languages',
-    items: 'Python (Pandas, SQLite, Matplotlib, NumPy), C, SQL, HTML5, CSS3, Racket, MIPS Assembly',
+    items: ['Python (Pandas, SQLite, Matplotlib, NumPy)', 'C', 'SQL', 'HTML5', 'CSS3', 'Racket', 'MIPS Assembly'],
   },
   {
     category: 'Cloud & DevOps',
-    items: 'AWS (EC2, S3, IAM, Lambda), Git, GitHub, Vercel, Supabase',
+    items: ['AWS (EC2, S3, IAM, Lambda)', 'Git', 'GitHub', 'Vercel', 'Supabase'],
   },
   {
     category: 'Backend & Database',
-    items: 'PostgreSQL, Supabase, Relational Database Design, REST APIs',
+    items: ['PostgreSQL', 'Supabase', 'Relational Database Design', 'REST APIs'],
   },
   {
     category: 'Software Concepts',
-    items: 'CRUD Operations, Authentication & Authorization, Routing',
+    items: ['CRUD Operations', 'Authentication & Authorization', 'Routing'],
   },
   {
     category: 'AI & LLMs',
-    items: 'Claude Code, Agentic Orchestration, AI Concepts & Literacy',
+    items: ['Claude Code', 'Agentic Orchestration', 'AI Concepts & Literacy'],
   },
 ]
 
 const NON_TECH_SKILLS = [
   {
     category: 'Leadership & Management',
-    items: 'Project Lifecycle Management, Cross-Functional Team Leadership, Resource Allocation',
+    items: ['Project Lifecycle Management', 'Cross-Functional Team Leadership', 'Resource Allocation'],
   },
   {
     category: 'Operations & Strategy',
-    items: 'Digital Transformation, Stakeholder Management, Workflow Automation',
+    items: ['Digital Transformation', 'Stakeholder Management', 'Workflow Automation'],
   },
   {
     category: 'Data & Business Analytics',
-    items: 'Data-Driven Decision Making, Performance Metrics, Trend Analysis',
+    items: ['Data-Driven Decision Making', 'Performance Metrics', 'Trend Analysis'],
   },
   {
     category: 'Technical Literacy',
-    items: 'Cloud Concepts (AWS), Relational Databases, UI/UX Prototyping (Figma), Agile Frameworks',
+    items: ['Cloud Concepts (AWS)', 'Relational Databases', 'UI/UX Prototyping (Figma)', 'Agile Frameworks'],
   },
   {
     category: 'Languages',
-    items: 'Bilingual Professional (Fluent in English and Spanish)',
+    items: ['Bilingual Professional (Fluent in English and Spanish)'],
   },
 ]
 
@@ -97,6 +97,37 @@ const CERTIFICATIONS = [
   'Foundations – Google Data Analytics Professional Certificate (Aug. 2025)',
   'Ask Questions to Make Data-Driven Decisions – Google Data Analytics Professional Certificate (Aug. 2025)',
 ]
+
+function SkillGroup({ heading, skills }) {
+  return (
+    <div className="space-y-6">
+      <p className="text-xs uppercase tracking-[0.3em] text-white/35 font-semibold">
+        {heading}
+      </p>
+      <div className="space-y-5">
+        {skills.map((skill, i) => (
+          <div key={i}>
+            <p className="text-white/80 font-semibold text-sm mb-2.5">{skill.category}</p>
+            <div className="flex flex-wrap gap-2">
+              {skill.items.map((item) => (
+                <span
+                  key={item}
+                  className="text-[0.7rem] px-2.5 py-1 rounded-full text-white/60 tracking-wide"
+                  style={{
+                    background: 'rgba(255, 255, 255, 0.06)',
+                    border: '1px solid rgba(255, 255, 255, 0.12)',
+                  }}
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
 
 export default function Skills() {
   return (
@@ -166,39 +197,10 @@ export default function Skills() {
           {/* Right — Tech + Non-Tech + Education (7 cols) */}
           <div className="lg:col-span-7 flex flex-col gap-8">
 
-            {/* Top pair: Technical Skills + Non-Technical Experience */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-
-              {/* Technical Skills */}
-              <div className="space-y-6">
-                <p className="text-xs uppercase tracking-[0.3em] text-white/35 font-semibold">
-                  technical skills
-                </p>
-                <div className="space-y-5">
-                  {TECH_SKILLS.map((skill, i) => (
-                    <div key={i}>
-                      <p className="text-white/80 font-semibold text-sm mb-1">{skill.category}</p>
-                      <p className="text-white/50 text-sm leading-relaxed">{skill.items}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Non-Technical Experience */}
-              <div className="space-y-6">
-                <p className="text-xs uppercase tracking-[0.3em] text-white/35 font-semibold">
-                  non-technical experience
-                </p>
-                <div className="space-y-5">
-                  {NON_TECH_SKILLS.map((skill, i) => (
-                    <div key={i}>
-                      <p className="text-white/80 font-semibold text-sm mb-1">{skill.category}</p>
-                      <p className="text-white/50 text-sm leading-relaxed">{skill.items}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
+            {/* Technical Skills + Non-Technical Experience — stacked full-width */}
+            <div className="space-y-10">
+              <SkillGroup heading="technical skills" skills={TECH_SKILLS} />
+              <SkillGroup heading="non-technical experience" skills={NON_TECH_SKILLS} />
             </div>
 
             {/* Education & Certifications */}

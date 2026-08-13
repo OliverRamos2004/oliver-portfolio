@@ -27,7 +27,7 @@ export default function Navbar() {
       <div
         className={`transition-all duration-300 ${
           scrolled
-            ? 'bg-white/95 backdrop-blur-md rounded-b-3xl shadow-2xl'
+            ? 'bg-white/95 backdrop-blur-md shadow-2xl'
             : 'bg-transparent shadow-none'
         }`}
       >

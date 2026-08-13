@@ -53,7 +53,7 @@ export default function Contact() {
         <div className="relative z-10 flex-1 max-w-7xl mx-auto w-full px-4 md:px-8 pt-20 md:pt-28 pb-16 flex flex-col">
 
           {/* Heading + subtitle */}
-          <div className="mb-auto">
+          <div className="mb-14 md:mb-16">
             <h2
               className="heading-inner-shadow font-black tracking-tighter leading-none mb-5"
               style={{
@@ -69,8 +69,74 @@ export default function Contact() {
             </p>
           </div>
 
+          {/* Contact form — UI only for now; wire up to Formspree (or similar) once ready */}
+          <form
+            onSubmit={(e) => e.preventDefault()}
+            className="w-full max-w-2xl mx-auto flex flex-col items-center gap-6 mb-16 md:mb-20"
+          >
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
+              <div className="flex flex-col gap-2">
+                <label htmlFor="firstName" className="font-mono text-xs uppercase tracking-widest text-white/70">
+                  First Name
+                </label>
+                <input
+                  id="firstName"
+                  name="firstName"
+                  type="text"
+                  placeholder="Jane"
+                  className="bg-white border border-black/10 rounded-[12px] text-black placeholder-black/35 px-4 py-3 text-sm focus:outline-none focus:border-black transition-colors duration-200"
+                />
+              </div>
+              <div className="flex flex-col gap-2">
+                <label htmlFor="lastName" className="font-mono text-xs uppercase tracking-widest text-white/70">
+                  Last Name
+                </label>
+                <input
+                  id="lastName"
+                  name="lastName"
+                  type="text"
+                  placeholder="Doe"
+                  className="bg-white border border-black/10 rounded-[12px] text-black placeholder-black/35 px-4 py-3 text-sm focus:outline-none focus:border-black transition-colors duration-200"
+                />
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-2 w-full">
+              <label htmlFor="reason" className="font-mono text-xs uppercase tracking-widest text-white/70">
+                Reason for Message
+              </label>
+              <input
+                id="reason"
+                name="reason"
+                type="text"
+                placeholder="Project inquiry, collaboration, just saying hi..."
+                className="bg-white border border-black/10 rounded-[12px] text-black placeholder-black/35 px-4 py-3 text-sm focus:outline-none focus:border-black transition-colors duration-200"
+              />
+            </div>
+
+            <div className="flex flex-col gap-2 w-full">
+              <label htmlFor="message" className="font-mono text-xs uppercase tracking-widest text-white/70">
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows={5}
+                placeholder="Tell me a bit about what you have in mind..."
+                className="bg-white border border-black/10 rounded-[12px] text-black placeholder-black/35 px-4 py-3 text-sm resize-none focus:outline-none focus:border-black transition-colors duration-200"
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="bg-white text-black text-xs font-bold tracking-[0.2em] uppercase px-8 py-3 rounded-[12px] hover:bg-white/85 transition-colors duration-300 cursor-pointer"
+            >
+              send message
+            </button>
+          </form>
+
           {/* Centered contact handles */}
-          <div className="flex flex-col items-center justify-center flex-1 gap-4 py-24">
+          <div className="flex flex-col items-center justify-center flex-1 gap-4 py-12">
             <a
               href="mailto:oliver78660@gmail.com"
               className="hover-sky-gradient font-black tracking-tight text-white/80 text-center leading-none transition-colors duration-300"

@@ -31,7 +31,7 @@ export default function Hero() {
             fontFamily: 'Inter, system-ui, sans-serif',
           }}
         >
-          hi, i am Oliver.
+          Oliver Ramos.
         </h1>
         <p
           className="mt-3 font-light tracking-widest uppercase text-slate-200/70"

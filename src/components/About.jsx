@@ -1,6 +1,6 @@
 const BACKGROUND_PARAS = [
   "I'm a Computer Science graduate from Wabash College with a drive for building tools and growth. As a developer, I focus on bridging the gap between complex tech and the people who use it. I value efficiency and community-driven work, and I'm always looking for ways to create better pipelines that solve real-world operational problems.",
-  "Over my educational and professional career, I have gained proficiency in various programming languages, Full-Stack development, and recently became fascinated with the power of Cloud Computing. I aspire to approach and solve complex problems by finding innovative solutions that provide real meaning to communities.",
+  "Over my educational and professional career, I have gained proficiency in Database Architecture, Front-End Development, and Data Workflows. I aspire to approach and solve complex problems by finding innovative solutions that provide real meaning to communities.",
   "Beyond coding, I have gained a background in Operations Management, Customer Relations (CRM), and running my own business ventures. These experiences helped me refine the leadership and critical thinking skills that I apply to every technical project I take on.",
   "I am someone who is passionate about continuous learning, fostering community, and pursuing growth. Outside of my professional experience and academia, I love playing the drums, vintage fashion, and connecting with people!",
 ]
@@ -14,8 +14,8 @@ function PolaroidImage() {
       >
         <div className="w-56 sm:w-64 md:w-72 aspect-[3/4] bg-slate-200 overflow-hidden">
           <img
-            src="/profile.jpeg"
-            alt="Oliver Ramos"
+            src="/oliver-ramos-graduation.JPG"
+            alt="Oliver Ramos Graduation"
             className="w-full h-full object-cover"
             onError={(e) => {
               const wrapper = e.target.parentElement
