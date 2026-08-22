@@ -58,13 +58,14 @@ const PROJECTS = [
   },
   {
     title: 'Tex Country Materials',
-    impact: 'Site currently in development — check back soon.',
-    description: '',
-    tags: [],
-    github: null,
-    live: null,
-    image: null,
-    size: 'placeholder',
+    impact: 'Built and deployed a business site for an Austin-based construction materials hauling company.',
+    description:
+      'Professional site for Tex Country Materials LLC, a materials hauling company in Austin, Texas delivering dirt, mulch, gravel, road base, and screened sand. Built with Next.js and Tailwind CSS, deployed on Vercel.',
+    tags: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Vercel'],
+    github: 'https://github.com/OliverRamos2004/texas-country-site-app',
+    live: 'https://texas-country-site-app.vercel.app/',
+    image: '/project-screenshots/tex-country-materials.png',
+    size: 'small',
   },
 ]
 
@@ -128,6 +129,9 @@ function ProjectCard({ project }) {
           alt={`Screenshot of ${project.title}`}
           className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
           loading="lazy"
+          onError={(e) => {
+            e.currentTarget.style.display = 'none'
+          }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
       </div>
