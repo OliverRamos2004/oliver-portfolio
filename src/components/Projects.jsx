@@ -30,7 +30,7 @@ const PROJECTS = [
       'Professional site for Jacky\'s Bouquets, a local florist in the South Texas area. Prototyped with Figma and deployed to AWS S3 for fast, reliable access.',
     tags: ['HTML5', 'CSS3', 'JavaScript', 'AWS S3', 'Git'],
     github: 'https://github.com/OliverRamos2004/Jackies-Bouquets',
-    live: 'http://jackysbouquets-web.s3-website-us-east-1.amazonaws.com/',
+    live: 'https://jackies-bouquets.vercel.app/',
     image: '/project-screenshots/jackys-bouquets.png',
     size: 'small',
   },
