@@ -63,7 +63,7 @@ const PROJECTS = [
       'Professional site for Tex Country Materials LLC, a materials hauling company in Austin, Texas delivering dirt, mulch, gravel, road base, and screened sand. Built with Next.js and Tailwind CSS, deployed on Vercel.',
     tags: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Vercel'],
     github: 'https://github.com/OliverRamos2004/texas-country-site-app',
-    live: 'https://texas-country-site-app.vercel.app/',
+    live: 'https://texcountrymaterials.com',
     image: '/project-screenshots/tex-country-materials.png',
     size: 'small',
   },
